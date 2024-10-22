@@ -8,7 +8,7 @@ namespace SalonSystem.Models.Skills {
         public string SkillName {set ; get;}
 
         public int SalonId {get;set;}
-        public Salon Salon {get;set;}
+        public Salon AssociatedSalon {get;set;}
         public int Duration {set;get;}
 
         public ICollection<TechnicianSkill> TechnicianSkills { get; set; }

@@ -1,0 +1,12 @@
+C:\Development\SalonSystem\SalonSystem.Models\bin\Debug\net8.0\SalonSystem.Models.deps.json
+C:\Development\SalonSystem\SalonSystem.Models\bin\Debug\net8.0\SalonSystem.Models.dll
+C:\Development\SalonSystem\SalonSystem.Models\bin\Debug\net8.0\SalonSystem.Models.pdb
+C:\Development\SalonSystem\SalonSystem.Models\obj\Debug\net8.0\SalonSystem.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Development\SalonSystem\SalonSystem.Models\obj\Debug\net8.0\SalonSystem.Models.AssemblyInfoInputs.cache
+C:\Development\SalonSystem\SalonSystem.Models\obj\Debug\net8.0\SalonSystem.Models.AssemblyInfo.cs
+C:\Development\SalonSystem\SalonSystem.Models\obj\Debug\net8.0\SalonSystem.Models.csproj.CoreCompileInputs.cache
+C:\Development\SalonSystem\SalonSystem.Models\obj\Debug\net8.0\SalonSystem.Models.sourcelink.json
+C:\Development\SalonSystem\SalonSystem.Models\obj\Debug\net8.0\SalonSystem.Models.dll
+C:\Development\SalonSystem\SalonSystem.Models\obj\Debug\net8.0\refint\SalonSystem.Models.dll
+C:\Development\SalonSystem\SalonSystem.Models\obj\Debug\net8.0\SalonSystem.Models.pdb
+C:\Development\SalonSystem\SalonSystem.Models\obj\Debug\net8.0\ref\SalonSystem.Models.dll

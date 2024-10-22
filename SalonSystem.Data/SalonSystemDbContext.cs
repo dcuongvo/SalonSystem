@@ -1,11 +1,13 @@
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-//using SalonSystem.Models;
-
+using SalonSystem.Models.Salons;
+using SalonSystem.Models.Technicians;
+using SalonSystem.Models.Skills;
+using SalonSystem.Models.Services;
 namespace SalonSystem.Data 
 {
-    public class SalonSystemDbContext : DbContext
+    public partial class SalonSystemDbContext : DbContext
     {
         public SalonSystemDbContext(DbContextOptions<SalonSystemDbContext> options) : base(options) {}
 
@@ -15,22 +17,28 @@ namespace SalonSystem.Data
         public DbSet<Service> Services {get;set;}
 
         public DbSet<TechnicianSkill> TechnicianSkills {get;set;}
-        public DbSet<ServiceSkill> {get;set;}
+        public DbSet<ServiceSkill> ServiceSkills {get;set;}
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // One Salon -Many Technician
             modelBuilder.Entity<Technician>()
-                .HasOne(tech => tech.Salon)
+                .HasOne(tech => tech.AssociatedSalon)
                 .WithMany(salon => salon.Technicians)
                 .HasForeignKey(tech => tech.SalonId);
 
             // Salon to many Skill
             modelBuilder.Entity<Skill>()
-                .hasOne(skill => skill.Salon)
+                .HasOne(skill => skill.AssociatedSalon)
+                .WithMany(salon => salon.Skills)
+                .HasForeignKey(skill => skill.SalonId);
+
+            //Salon to many Service
+            modelBuilder.Entity<Service>()
+                .HasOne(service => service.AssociatedSalon)
                 .WithMany(salon => salon.Services)
-                .HasForeignKey(skill => skill.Salonid)
+                .HasForeignKey(service => service.SalonId);
 
 
             // Many-to-Many: Technician to Skill 
@@ -39,12 +47,12 @@ namespace SalonSystem.Data
 
             modelBuilder.Entity<TechnicianSkill>()
                 .HasOne(ts => ts.Technician)
-                .WithMany(t => t.Skills)
+                .WithMany(tech => tech.TechnicianSkills)
                 .HasForeignKey(ts => ts.TechnicianId);
 
             modelBuilder.Entity<TechnicianSkill>()
                 .HasOne(ts => ts.Skill)
-                .WithMany(s => s.TechnicianSkills)
+                .WithMany(skill => skill.TechnicianSkills)
                 .HasForeignKey(ts => ts.SkillId);
 
             // Many-to-Many: Service to Skill
@@ -53,12 +61,12 @@ namespace SalonSystem.Data
 
             modelBuilder.Entity<ServiceSkill>()
                 .HasOne(ss => ss.Service)
-                .WithMany(s => s.ServiceSkills)
+                .WithMany(service => service.ServiceSkills)
                 .HasForeignKey(ss => ss.ServiceId);
 
             modelBuilder.Entity<ServiceSkill>()
                 .HasOne(ss => ss.Skill)
-                .WithMany(s => s.ServiceSkills)
+                .WithMany(skill=> skill.ServiceSkills)
                 .HasForeignKey(ss => ss.SkillId);
         }
 

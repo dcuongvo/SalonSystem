@@ -1,5 +1,4 @@
 using  SalonSystem.Models.Services;
-using  SalonSystem.Models.Skills;
 
 namespace SalonSystem.Models.Skills
 {

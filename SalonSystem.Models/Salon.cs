@@ -1,11 +1,13 @@
 namespace SalonSystem.Models.Salons;
 using SalonSystem.Models.Services;
 using SalonSystem.Models.Technicians;
-using SalonSystem.Models.WorkingHours;
+using SalonSystem.Models.Skills;
+//using SalonSystem.Models.WorkingHours;
 
 public class Salon {
     public ICollection<Technician> Technicians {get;set;}
     public ICollection<Service> Services {get;set;}
+    public ICollection<Skill> Skills {get;set;}
     public int SalonId{get; private set;}
     public string Name {get;set;}
     //public Dictionary<DayOfWeek, WorkingHours> WeeklyWorkingHours { get; set; }

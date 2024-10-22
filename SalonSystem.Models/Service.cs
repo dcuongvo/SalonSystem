@@ -2,13 +2,17 @@
 
 using SalonSystem.Models.Skills;
 using SalonSystem.Models.Technicians;
-
+using SalonSystem.Models.Salons;
 
 namespace SalonSystem.Models.Services 
 {
     public class Service {
         public string ServiceName {get;set;}
-        public List<Skill> RequiredSkills {get;set;}
+        public int SalonId { get; set; } 
+        public Salon AssociatedSalon { get; set; } 
+        public ICollection<Skill> RequiredSkills { get; set; }
+
+        public ICollection<ServiceSkill> ServiceSkills { get; set; }
 
         public Service() {
             ServiceName = "No Name";
