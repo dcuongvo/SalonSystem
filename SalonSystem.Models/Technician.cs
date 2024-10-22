@@ -14,7 +14,9 @@ namespace SalonSystem.Models.Technicians
         public int SalonId { get; set; }
         public Salon AssociatedSalon {get;set;}
         public ICollection<Skill> SkillSet {get; set;}
-         public ICollection<TechnicianSkill> TechnicianSkills { get; set; }
+        public ICollection<TechnicianSkill> TechnicianSkills { get; set; }
+
+        public Technician() {}
 
         public Technician (int id, string name, int salary, PayPeriod payPeriodType = PayPeriod.Weekly)
             :base(id,name,salary,payPeriodType) 

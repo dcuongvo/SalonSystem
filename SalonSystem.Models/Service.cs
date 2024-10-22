@@ -7,6 +7,7 @@ using SalonSystem.Models.Salons;
 namespace SalonSystem.Models.Services 
 {
     public class Service {
+        public int ServiceId { get; set; } 
         public string ServiceName {get;set;}
         public int SalonId { get; set; } 
         public Salon AssociatedSalon { get; set; } 

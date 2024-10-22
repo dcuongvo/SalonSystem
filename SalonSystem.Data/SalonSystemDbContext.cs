@@ -48,12 +48,14 @@ namespace SalonSystem.Data
             modelBuilder.Entity<TechnicianSkill>()
                 .HasOne(ts => ts.Technician)
                 .WithMany(tech => tech.TechnicianSkills)
-                .HasForeignKey(ts => ts.TechnicianId);
+                .HasForeignKey(ts => ts.TechnicianId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<TechnicianSkill>()
                 .HasOne(ts => ts.Skill)
                 .WithMany(skill => skill.TechnicianSkills)
-                .HasForeignKey(ts => ts.SkillId);
+                .HasForeignKey(ts => ts.SkillId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             // Many-to-Many: Service to Skill
             modelBuilder.Entity<ServiceSkill>()
@@ -62,12 +64,14 @@ namespace SalonSystem.Data
             modelBuilder.Entity<ServiceSkill>()
                 .HasOne(ss => ss.Service)
                 .WithMany(service => service.ServiceSkills)
-                .HasForeignKey(ss => ss.ServiceId);
+                .HasForeignKey(ss => ss.ServiceId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<ServiceSkill>()
                 .HasOne(ss => ss.Skill)
                 .WithMany(skill=> skill.ServiceSkills)
-                .HasForeignKey(ss => ss.SkillId);
+                .HasForeignKey(ss => ss.SkillId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
 
     }

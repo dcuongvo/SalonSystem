@@ -5,7 +5,7 @@ namespace SalonSystem.Models.Skills {
     public class Skill 
     {
         public int SkillId {get;set;}
-        public string SkillName {set ; get;}
+        public string SkillName {set ; get;} = ""; 
 
         public int SalonId {get;set;}
         public Salon AssociatedSalon {get;set;}
@@ -13,7 +13,7 @@ namespace SalonSystem.Models.Skills {
 
         public ICollection<TechnicianSkill> TechnicianSkills { get; set; }
         public ICollection<ServiceSkill> ServiceSkills { get; set; }
-
+        public Skill() {}
         public Skill(string name, int duration = -1) => (SkillName, Duration) = (name, duration);
         public override bool Equals(object? obj)
         {
