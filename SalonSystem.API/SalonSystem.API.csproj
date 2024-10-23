@@ -19,6 +19,7 @@
   <ItemGroup>
     <ProjectReference Include="..\SalonSystem.Models\SalonSystem.Models.csproj" />
     <ProjectReference Include="..\SalonSystem.Data\SalonSystem.Data.csproj" />
+    <ProjectReference Include="..\SalonSystem.Services\SalonSystem.Services.csproj" />
   </ItemGroup>
 
 </Project>

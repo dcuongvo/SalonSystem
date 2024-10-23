@@ -159,3 +159,7 @@ C:\Development\SalonSystem\SalonSystem.Tests\obj\Debug\net8.0\refint\SalonSystem
 C:\Development\SalonSystem\SalonSystem.Tests\obj\Debug\net8.0\SalonSystem.Tests.pdb
 C:\Development\SalonSystem\SalonSystem.Tests\obj\Debug\net8.0\SalonSystem.Tests.genruntimeconfig.cache
 C:\Development\SalonSystem\SalonSystem.Tests\obj\Debug\net8.0\ref\SalonSystem.Tests.dll
+C:\Development\SalonSystem\SalonSystem.Tests\bin\Debug\net8.0\Castle.Core.dll
+C:\Development\SalonSystem\SalonSystem.Tests\bin\Debug\net8.0\Moq.dll
+C:\Development\SalonSystem\SalonSystem.Tests\bin\Debug\net8.0\SalonSystem.Services.dll
+C:\Development\SalonSystem\SalonSystem.Tests\bin\Debug\net8.0\SalonSystem.Services.pdb

@@ -1613,6 +1613,19 @@
         "runtime": {
           "bin/placeholder/SalonSystem.Models.dll": {}
         }
+      },
+      "SalonSystem.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "SalonSystem.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SalonSystem.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SalonSystem.Services.dll": {}
+        }
       }
     }
   },
@@ -4473,6 +4486,11 @@
       "type": "project",
       "path": "../SalonSystem.Models/SalonSystem.Models.csproj",
       "msbuildProject": "../SalonSystem.Models/SalonSystem.Models.csproj"
+    },
+    "SalonSystem.Services/1.0.0": {
+      "type": "project",
+      "path": "../SalonSystem.Services/SalonSystem.Services.csproj",
+      "msbuildProject": "../SalonSystem.Services/SalonSystem.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4481,6 +4499,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 8.0.10",
       "SalonSystem.Data >= 1.0.0",
       "SalonSystem.Models >= 1.0.0",
+      "SalonSystem.Services >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
@@ -4514,6 +4533,9 @@
             },
             "C:\\Development\\SalonSystem\\SalonSystem.Models\\SalonSystem.Models.csproj": {
               "projectPath": "C:\\Development\\SalonSystem\\SalonSystem.Models\\SalonSystem.Models.csproj"
+            },
+            "C:\\Development\\SalonSystem\\SalonSystem.Services\\SalonSystem.Services.csproj": {
+              "projectPath": "C:\\Development\\SalonSystem\\SalonSystem.Services\\SalonSystem.Services.csproj"
             }
           }
         }

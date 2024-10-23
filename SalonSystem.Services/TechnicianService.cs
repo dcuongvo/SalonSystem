@@ -1,6 +1,6 @@
 using SalonSystem.Data.Repositories;
-using SalonSystem.Models.Technician;
-using System.Collection.Generic;
+using SalonSystem.Models.Technicians;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace SalonSystem.Services 
@@ -29,7 +29,7 @@ namespace SalonSystem.Services
         // Add new technician
         public async Task<Technician> AddTechnicianAsync(Technician technician)
         {
-            // Business logic can be added here before adding (e.g., validation)
+            // need to update more logic after adding salon service
             return await _technicianRepository.AddTechnicianAsync(technician);
         }
 
@@ -38,7 +38,7 @@ namespace SalonSystem.Services
         {
             if (id != technician.TechnicianId)
             {
-                return null; // Or throw an exception based on your needs
+                return null; //revisit
             }
 
             return await _technicianRepository.UpdateTechnicianAsync(technician);

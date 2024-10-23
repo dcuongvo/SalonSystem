@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using SalonSystem.Data.Repositories;
 using SalonSystem.Models.Technicians;
+using SalonSystem.Services;
 
 namespace SalonSystem.API.Controllers  
 {
@@ -8,25 +8,25 @@ namespace SalonSystem.API.Controllers
     [ApiController]
     public class TechnicianController : ControllerBase 
     {
-        private readonly ITechnicianRepository _technicianRepository;
+        private readonly TechnicianService _technicianService;
 
-        public TechnicianController(ITechnicianRepository technicianRepository)
+        public TechnicianController(TechnicianService technicianService)
         {
-            _technicianRepository = technicianRepository;
+            _technicianService = technicianService;
         }
 
         //GET http request to get all techncians
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Technician>>> GetAllTechnician()
         {
-            var technicians = await _technicianRepository.GetAllTechniciansAsync();
+            var technicians = await _technicianService.GetAllTechniciansAsync();
             return Ok(technicians);
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Technician>> GetTechnicianById(int id) 
         {
-            var technician = await _technicianRepository.GetTechnicianByIdAsync(id);
+            var technician = await _technicianService.GetTechnicianByIdAsync(id);
             if (technician == null)
             {
                 return NotFound();
@@ -37,7 +37,7 @@ namespace SalonSystem.API.Controllers
         [HttpPost]
         public async Task<ActionResult<Technician>> AddTechnician(Technician technician)
         {
-            var newTechnician = await _technicianRepository.AddTechnicianAsync(technician);                                       
+            var newTechnician = await _technicianService.AddTechnicianAsync(technician);                                       
             return CreatedAtAction(nameof(GetTechnicianById), new {id = newTechnician.TechnicianId}, newTechnician);
         }
 
@@ -49,7 +49,7 @@ namespace SalonSystem.API.Controllers
                 return BadRequest();
             }
 
-            var updatedTechnician = await _technicianRepository.UpdateTechnicianAsync(technician);
+            var updatedTechnician = await _technicianService.UpdateTechnicianAsync(id,technician);
             if (updatedTechnician == null) 
             {
                 return NotFound();
@@ -61,13 +61,13 @@ namespace SalonSystem.API.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTechnician(int id)
         {
-            var result = await _technicianRepository.DeleteTechnicianAsync(id);
+            var result = await _technicianService.DeleteTechnicianAsync(id);
             if (!result) 
             {
                 return NotFound();
             }
             return NoContent();
-            //Ok()
+            //return Ok()?
         }
 
     } 

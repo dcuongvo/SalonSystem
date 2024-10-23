@@ -12,6 +12,7 @@
           "Microsoft.EntityFrameworkCore.Design": "8.0.10",
           "SalonSystem.Data": "1.0.0",
           "SalonSystem.Models": "1.0.0",
+          "SalonSystem.Services": "1.0.0",
           "Swashbuckle.AspNetCore": "6.4.0"
         },
         "runtime": {
@@ -964,6 +965,17 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "SalonSystem.Services/1.0.0": {
+        "dependencies": {
+          "SalonSystem.Data": "1.0.0"
+        },
+        "runtime": {
+          "SalonSystem.Services.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -1553,6 +1565,11 @@
       "sha512": ""
     },
     "SalonSystem.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SalonSystem.Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
