@@ -10,3 +10,7 @@ C:\Development\SalonSystem\SalonSystem.Models\obj\Debug\net8.0\SalonSystem.Model
 C:\Development\SalonSystem\SalonSystem.Models\obj\Debug\net8.0\refint\SalonSystem.Models.dll
 C:\Development\SalonSystem\SalonSystem.Models\obj\Debug\net8.0\SalonSystem.Models.pdb
 C:\Development\SalonSystem\SalonSystem.Models\obj\Debug\net8.0\ref\SalonSystem.Models.dll
+C:\Development\SalonSystem\SalonSystem.Models\bin\Debug\net8.0\SalonSystem.Common.dll
+C:\Development\SalonSystem\SalonSystem.Models\bin\Debug\net8.0\SalonSystem.Common.pdb
+C:\Development\SalonSystem\SalonSystem.Models\obj\Debug\net8.0\SalonSystem.Models.csproj.AssemblyReference.cache
+C:\Development\SalonSystem\SalonSystem.Models\obj\Debug\net8.0\SalonSys.B5F84DF2.Up2Date

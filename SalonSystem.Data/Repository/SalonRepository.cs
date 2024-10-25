@@ -17,7 +17,20 @@ namespace SalonSystem.Data.Repositories
 
         public async Task<Salon>GetSalonByIdAsync(int salonId) 
         {
-            return await _context.Salons.FindAsync(salonId);
+            return await _context.Salons
+                    .Include(s => s.Technicians)
+                    /*.Select(salon => new Salon   // Can include this one for selective choosing fields.
+                    {
+                        SalonId = salon.SalonId,
+                        Name = salon.Name,
+                        Technicians = salon.Technicians.Select(t => new Technician
+                        {
+                            TechnicianId = t.TechnicianId,
+                            Name = t.Name
+                        }).ToList()
+                    })*/
+                    .FirstOrDefaultAsync(s => s.SalonId == salonId);
+            //return await _context.Salons.FindAsync(salonId);
         }
 
         public async Task<Salon> AddSalonAsync(Salon salon)

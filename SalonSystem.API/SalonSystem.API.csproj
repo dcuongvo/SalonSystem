@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.10">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -20,6 +21,7 @@
     <ProjectReference Include="..\SalonSystem.Models\SalonSystem.Models.csproj" />
     <ProjectReference Include="..\SalonSystem.Data\SalonSystem.Data.csproj" />
     <ProjectReference Include="..\SalonSystem.Services\SalonSystem.Services.csproj" />
+    <ProjectReference Include="..\SalonSystem.DTOs\SalonSystem.DTOs.csproj" />
   </ItemGroup>
 
 </Project>

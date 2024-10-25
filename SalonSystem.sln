@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalonSystem.Tests", "SalonS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalonSystem.Services", "SalonSystem.Services\SalonSystem.Services.csproj", "{724AF441-87B9-419F-911E-E587550648D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalonSystem.DTOs", "SalonSystem.DTOs\SalonSystem.DTOs.csproj", "{610E8217-7C55-42DA-A651-8E0FA6856D37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalonSystem.Common", "SalonSystem.Common\SalonSystem.Common.csproj", "{FCD479E9-D393-4D94-9F95-37C174F3A38C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +46,13 @@ Global
 		{724AF441-87B9-419F-911E-E587550648D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{724AF441-87B9-419F-911E-E587550648D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{724AF441-87B9-419F-911E-E587550648D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{610E8217-7C55-42DA-A651-8E0FA6856D37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{610E8217-7C55-42DA-A651-8E0FA6856D37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{610E8217-7C55-42DA-A651-8E0FA6856D37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{610E8217-7C55-42DA-A651-8E0FA6856D37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCD479E9-D393-4D94-9F95-37C174F3A38C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCD479E9-D393-4D94-9F95-37C174F3A38C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCD479E9-D393-4D94-9F95-37C174F3A38C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCD479E9-D393-4D94-9F95-37C174F3A38C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

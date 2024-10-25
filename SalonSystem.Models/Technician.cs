@@ -1,9 +1,8 @@
-
-
 using SalonSystem.Models.Skills;
 using SalonSystem.Models.Employees;
 using SalonSystem.Models.Services;
 using SalonSystem.Models.Salons;
+using SalonSystem.Commom.Enum; 
 using System.Dynamic;
 
 namespace SalonSystem.Models.Technicians 
@@ -13,7 +12,7 @@ namespace SalonSystem.Models.Technicians
         public int TechnicianId { get; set; }
         public int SalonId { get; set; }
         public Salon AssociatedSalon {get;set;}
-        public ICollection<Skill> SkillSet {get; set;}
+        public ICollection<Skill> SkillSet {get; set;} = new List<Skill>();
         public ICollection<TechnicianSkill> TechnicianSkills { get; set; }
 
         public Technician() {}

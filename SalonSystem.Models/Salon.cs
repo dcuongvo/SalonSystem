@@ -12,12 +12,20 @@ public class Salon {
     public string Name {get;set;}
     //public Dictionary<DayOfWeek, WorkingHours> WeeklyWorkingHours { get; set; }
 
+    public Salon() 
+    {
+        Name = "";
+        Technicians = new List<Technician>();
+        Services = new List<Service>();
+        Skills = new List<Skill>();
+    }
     //Constructor with only name
     public Salon(string name) {
         Name = name;
         //WeeklyWorkingHours = new Dictionary<DayOfWeek, WorkingHours>();
         Technicians = new List<Technician>();
         Services = new List<Service>();
+        Skills = new List<Skill>();
     }
 
     public void AddService(Service newService) {

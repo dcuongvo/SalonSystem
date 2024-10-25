@@ -16,3 +16,5 @@ C:\Development\SalonSystem\SalonSystem.Data\obj\Debug\net8.0\refint\SalonSystem.
 C:\Development\SalonSystem\SalonSystem.Data\obj\Debug\net8.0\SalonSystem.Data.pdb
 C:\Development\SalonSystem\SalonSystem.Data\obj\Debug\net8.0\SalonSystem.Data.genruntimeconfig.cache
 C:\Development\SalonSystem\SalonSystem.Data\obj\Debug\net8.0\ref\SalonSystem.Data.dll
+C:\Development\SalonSystem\SalonSystem.Data\bin\Debug\net8.0\SalonSystem.Common.dll
+C:\Development\SalonSystem\SalonSystem.Data\bin\Debug\net8.0\SalonSystem.Common.pdb

@@ -16,3 +16,7 @@ C:\Development\SalonSystem\SalonSystem.Services\obj\Debug\net8.0\SalonSystem.Ser
 C:\Development\SalonSystem\SalonSystem.Services\obj\Debug\net8.0\refint\SalonSystem.Services.dll
 C:\Development\SalonSystem\SalonSystem.Services\obj\Debug\net8.0\SalonSystem.Services.pdb
 C:\Development\SalonSystem\SalonSystem.Services\obj\Debug\net8.0\ref\SalonSystem.Services.dll
+C:\Development\SalonSystem\SalonSystem.Services\bin\Debug\net8.0\SalonSystem.Common.dll
+C:\Development\SalonSystem\SalonSystem.Services\bin\Debug\net8.0\SalonSystem.DTOs.dll
+C:\Development\SalonSystem\SalonSystem.Services\bin\Debug\net8.0\SalonSystem.DTOs.pdb
+C:\Development\SalonSystem\SalonSystem.Services\bin\Debug\net8.0\SalonSystem.Common.pdb

@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using SalonSystem.Models.Salons;
 using SalonSystem.Services;
+using SalonSystem.DTOs;
+using AutoMapper;
 
 namespace SalonSystem.API.Controllers  
 {
@@ -9,10 +11,12 @@ namespace SalonSystem.API.Controllers
     public class SalonController : ControllerBase 
     {
         private readonly SalonService _salonService;
+        private readonly IMapper _mapper;
 
-        public SalonController(SalonService salonService)
+        public SalonController(SalonService salonService, IMapper mapper)
         {
             _salonService = salonService;
+            _mapper = mapper;
         }
 
         //GET http request to get all techncians
@@ -24,38 +28,45 @@ namespace SalonSystem.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Salon>> GetSalonById(int id) 
+        public async Task<ActionResult<SalonDto>> GetSalonById(int id)
         {
             var salon = await _salonService.GetSalonByIdAsync(id);
             if (salon == null)
             {
                 return NotFound();
-            } 
-            return Ok(salon);
+            }
+
+            // Map the salon entity to the DTO in the controller
+            var salonDto = _mapper.Map<SalonDto>(salon);
+            return Ok(salonDto);
         }
 
+
         [HttpPost]
-        public async Task<ActionResult<Salon>> AddSalon(Salon salon)
+        public async Task<ActionResult<SalonDto>> AddSalon(CreateSalonDto salonDto)
         {
-            var newSalon = await _salonService.AddSalonAsync(salon);                                       
-            return CreatedAtAction(nameof(GetSalonById), new {id = newSalon.SalonId}, newSalon);
+            var salon = _mapper.Map<Salon>(salonDto);
+            var newSalon = await _salonService.AddSalonAsync(salon);
+            var newSalonDto = _mapper.Map<SalonDto>(newSalon);
+            return CreatedAtAction(nameof(GetSalonById), new { id = newSalonDto.SalonId }, newSalonDto);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateSalon(int id, Salon salon) 
+        public async Task<IActionResult> UpdateSalon(int id, UpdateSalonDto salonDto)
         {
-            if (id != salon.SalonId) 
+            if (id != salonDto.SalonId)
             {
                 return BadRequest();
             }
 
-            var updatedSalon = await _salonService.UpdateSalonAsync(id,salon);
-            if (updatedSalon == null) 
+            var salon = _mapper.Map<Salon>(salonDto);
+            var updatedSalon = await _salonService.UpdateSalonAsync(id, salon);
+            if (updatedSalon == null)
             {
                 return NotFound();
             }
+
             return NoContent();
-            //return Ok(updatedSalon)
         }
 
         [HttpDelete("{id}")]

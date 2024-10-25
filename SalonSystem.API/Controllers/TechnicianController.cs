@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using SalonSystem.Models.Technicians;
 using SalonSystem.Services;
+using SalonSystem.DTOs;
+using AutoMapper;
 
 namespace SalonSystem.API.Controllers  
 {
@@ -9,55 +11,70 @@ namespace SalonSystem.API.Controllers
     public class TechnicianController : ControllerBase 
     {
         private readonly TechnicianService _technicianService;
+        private readonly IMapper _mapper;
 
-        public TechnicianController(TechnicianService technicianService)
+        public TechnicianController(TechnicianService technicianService, IMapper mapper)
         {
             _technicianService = technicianService;
+            _mapper = mapper;
         }
 
-        //GET http request to get all techncians
+        // GET: api/technician
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Technician>>> GetAllTechnician()
+        public async Task<ActionResult<IEnumerable<TechnicianDto>>> GetAllTechnicians()
         {
             var technicians = await _technicianService.GetAllTechniciansAsync();
-            return Ok(technicians);
+            var technicianDtos = _mapper.Map<IEnumerable<TechnicianDto>>(technicians);
+            return Ok(technicianDtos);
         }
 
+        // GET: api/technician/{id}
         [HttpGet("{id}")]
-        public async Task<ActionResult<Technician>> GetTechnicianById(int id) 
+        public async Task<ActionResult<TechnicianDto>> GetTechnicianById(int id) 
         {
             var technician = await _technicianService.GetTechnicianByIdAsync(id);
             if (technician == null)
             {
                 return NotFound();
             } 
-            return Ok(technician);
+            var technicianDto = _mapper.Map<TechnicianDto>(technician);
+            return Ok(technicianDto);
         }
 
+        // POST: api/technician
         [HttpPost]
-        public async Task<ActionResult<Technician>> AddTechnician(Technician technician)
+        public async Task<ActionResult<TechnicianDto>> AddTechnician(CreateTechnicianDto technicianDto)
         {
-            var newTechnician = await _technicianService.AddTechnicianAsync(technician);                                       
-            return CreatedAtAction(nameof(GetTechnicianById), new {id = newTechnician.TechnicianId}, newTechnician);
+            var newTechnician = await _technicianService.AddTechnicianAsync(technicianDto);
+            var technicianDtoResponse = _mapper.Map<TechnicianDto>(newTechnician);
+            return CreatedAtAction(nameof(GetTechnicianById), new { id = technicianDtoResponse.TechnicianId }, technicianDtoResponse);
         }
 
+        // PUT: api/technician/{id}
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateTechnician(int id, Technician technician) 
+        public async Task<IActionResult> UpdateTechnician(int id, UpdateTechnicianDto updateTechnicianDto) 
         {
-            if (id != technician.TechnicianId) 
+            if (id != updateTechnicianDto.TechnicianId) 
             {
-                return BadRequest();
+                return BadRequest("Technician ID in the route does not match ID in the payload.");
             }
 
-            var updatedTechnician = await _technicianService.UpdateTechnicianAsync(id,technician);
+            // Map DTO to Technician model
+            var technician = _mapper.Map<Technician>(updateTechnicianDto);
+            
+            // Update technician in the service
+            var updatedTechnician = await _technicianService.UpdateTechnicianAsync(id, technician);
+
             if (updatedTechnician == null) 
             {
                 return NotFound();
             }
-            return NoContent();
-            //return Ok(updatedTechnician)
+
+            // Return the updated technician details
+            return Ok(_mapper.Map<TechnicianDto>(updatedTechnician));
         }
 
+        // DELETE: api/technician/{id}
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTechnician(int id)
         {
@@ -67,8 +84,6 @@ namespace SalonSystem.API.Controllers
                 return NotFound();
             }
             return NoContent();
-            //return Ok()?
         }
-
     } 
 }

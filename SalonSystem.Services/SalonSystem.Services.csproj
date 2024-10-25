@@ -2,6 +2,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SalonSystem.Data\SalonSystem.Data.csproj" />
+    <ProjectReference Include="..\SalonSystem.DTOs\SalonSystem.DTOs.csproj" />
+    <ProjectReference Include="..\SalonSystem.Common\SalonSystem.Common.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
