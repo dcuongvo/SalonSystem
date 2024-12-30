@@ -5,10 +5,10 @@ namespace SalonSystem.Domain.Entities.Services
     public class ServiceSkill
     {
         public int ServiceId { get; set; } // Foreign Key to Service
-        public virtual Service Service { get; set; } // Navigation Property
+        public virtual Service? Service { get; set; } // Navigation Property
 
         public int SkillId { get; set; } // Foreign Key to Skill
-        public virtual Skill Skill { get; set; } // Navigation Property
+        public virtual Skill? Skill { get; set; } // Navigation Property
 
         // Constructor
         public ServiceSkill() { }

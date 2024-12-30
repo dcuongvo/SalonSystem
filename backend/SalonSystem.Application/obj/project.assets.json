@@ -1,49 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {
-      "SalonSystem.Common/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "compile": {
-          "bin/placeholder/SalonSystem.Common.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SalonSystem.Common.dll": {}
-        }
-      },
-      "SalonSystem.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "SalonSystem.Common": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/SalonSystem.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SalonSystem.Domain.dll": {}
-        }
-      }
-    }
+    "net9.0": {}
   },
-  "libraries": {
-    "SalonSystem.Common/1.0.0": {
-      "type": "project",
-      "path": "../SalonSystem.Common/SalonSystem.Common.csproj",
-      "msbuildProject": "../SalonSystem.Common/SalonSystem.Common.csproj"
-    },
-    "SalonSystem.Domain/1.0.0": {
-      "type": "project",
-      "path": "../SalonSystem.Domain/SalonSystem.Domain.csproj",
-      "msbuildProject": "../SalonSystem.Domain/SalonSystem.Domain.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    "net8.0": [
-      "SalonSystem.Common >= 1.0.0",
-      "SalonSystem.Domain >= 1.0.0"
-    ]
+    "net9.0": []
   },
   "packageFolders": {
     "C:\\Users\\dcuon\\.nuget\\packages\\": {}
@@ -61,22 +23,15 @@
         "C:\\Users\\dcuon\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "net8.0"
+        "net9.0"
       ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "projectReferences": {
-            "C:\\Users\\dcuon\\Development\\.NET\\SalonSystem\\backend\\SalonSystem.Common\\SalonSystem.Common.csproj": {
-              "projectPath": "C:\\Users\\dcuon\\Development\\.NET\\SalonSystem\\backend\\SalonSystem.Common\\SalonSystem.Common.csproj"
-            },
-            "C:\\Users\\dcuon\\Development\\.NET\\SalonSystem\\backend\\SalonSystem.Domain\\SalonSystem.Domain.csproj": {
-              "projectPath": "C:\\Users\\dcuon\\Development\\.NET\\SalonSystem\\backend\\SalonSystem.Domain\\SalonSystem.Domain.csproj"
-            }
-          }
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -88,11 +43,12 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
-      "net8.0": {
-        "targetAlias": "net8.0",
+      "net9.0": {
+        "targetAlias": "net9.0",
         "imports": [
           "net461",
           "net462",
@@ -109,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

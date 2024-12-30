@@ -9,7 +9,8 @@ namespace SalonSystem.Domain.Entities.Services
         public string ServiceName { get; set; } = string.Empty; 
 
         public int SalonId { get; set; } 
-        public virtual Salon AssociatedSalon { get; set; }
+        public virtual Salon? AssociatedSalon { get; set; }
+        public int Duration {get;set;} = -1;
 
         public ICollection<ServiceSkill> ServiceSkills { get; set; } = new List<ServiceSkill>(); // Required skills for this service
 
@@ -20,6 +21,13 @@ namespace SalonSystem.Domain.Entities.Services
         {
             ServiceName = serviceName;
             SalonId = salonId;
+        }
+        public Service(string serviceName, int salonId,Salon associatedSalon, int duration)
+        {
+            ServiceName = serviceName;
+            SalonId = salonId;
+            AssociatedSalon = associatedSalon;
+            Duration = duration;
         }
 
         // Method to add a required skill
@@ -33,6 +41,7 @@ namespace SalonSystem.Domain.Entities.Services
             ServiceSkills.Add(new ServiceSkill
             {
                 ServiceId = this.ServiceId,
+                Service = this,
                 SkillId = skill.SkillId,
                 Skill = skill
             });

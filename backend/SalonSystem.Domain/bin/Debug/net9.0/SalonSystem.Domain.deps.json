@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "SalonSystem.Domain/1.0.0": {
+        "dependencies": {
+          "SalonSystem.Common": "1.0.0"
+        },
+        "runtime": {
+          "SalonSystem.Domain.dll": {}
+        }
+      },
+      "SalonSystem.Common/1.0.0": {
+        "runtime": {
+          "SalonSystem.Common.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SalonSystem.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SalonSystem.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

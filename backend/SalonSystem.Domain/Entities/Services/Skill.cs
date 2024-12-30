@@ -9,7 +9,7 @@ namespace SalonSystem.Domain.Entities.Services
         public string SkillName { get; set; } = string.Empty; // Name of the skill
 
         public int SalonId { get; set; } // Foreign Key to Salon
-        public virtual Salon AssociatedSalon { get; set; } // Navigation Property
+        public virtual Salon? AssociatedSalon { get; set; } // Navigation Property
 
         public int Duration { get; set; } = -1; // Duration in minutes (optional)
 

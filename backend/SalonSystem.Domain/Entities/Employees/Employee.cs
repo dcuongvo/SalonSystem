@@ -7,9 +7,9 @@ namespace SalonSystem.Domain.Entities.Employees
     {
         public int EmployeeId { get; set; } // Primary Key
         public int SalonId { get; set; } // Foreign Key to Salon
-        public virtual Salon AssociatedSalon { get; set; } // Navigation Property
+        public virtual required Salon AssociatedSalon { get; set; } // Navigation Property
 
-        public string Name { get; set; }
+        public string Name { get; set; } = "";
         public int Salary { get; set; }
         public PayPeriod PayPeriodType { get; set; }
 

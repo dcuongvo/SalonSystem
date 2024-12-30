@@ -1,4 +1,4 @@
-using SalonSystem.Domain.Entities.Common;
+using SalonSystem.Domain.Entities.Services;
 using SalonSystem.Domain.Entities.Technicians;
 using SalonSystem.Domain.Entities.Users;
 
@@ -9,9 +9,9 @@ namespace SalonSystem.Domain.Entities.Salons
 
         
         public int SalonId { get; private set; } // Primary Key
-        public string Name { get; set; } // Salon Name
+        public string Name { get; set; } = ""; // Salon Name
         public int OwnerId { get; set; }
-        public User Owner { get; set; }
+        public User? Owner { get; set; }
         public ICollection<Technician> Technicians { get; set; } = new List<Technician>(); // Working Technicians
         public ICollection<Service> Services { get; set; } = new List<Service>(); // All Offering Services
         public ICollection<Skill> Skills { get; set; } = new List<Skill>(); // 
@@ -61,7 +61,7 @@ namespace SalonSystem.Domain.Entities.Salons
         // Add a new service by name
         public void AddService(string name, int duration = -1)
         {
-            Services.Add(new Service(name,SalonId));
+            Services.Add(new Service(name,SalonId,this,duration));
         }
 
         // Check if the salon is open on a specific date and time

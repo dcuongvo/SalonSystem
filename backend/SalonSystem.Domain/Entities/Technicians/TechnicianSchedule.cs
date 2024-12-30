@@ -9,7 +9,7 @@ namespace SalonSystem.Domain.Entities.Technicians
 
         // Foreign Key to Technician
         public int TechnicianId { get; set; }
-        public virtual Technician Technician { get; set; } // Navigation Property
+        public virtual Technician? Technician { get; set; } // Navigation Property
 
         // Day of the Week this schedule applies to
         public DayOfWeek Day { get; set; }

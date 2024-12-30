@@ -8,10 +8,10 @@ namespace SalonSystem.Domain.Entities.Users
         public int UserId { get; set; }
 
         // Basic Information
-        public string UserName { get; set; } // Owner username
-        public string Email { get; set; } // Owner email
-        public string PasswordHash { get; set; }
-        public string PasswordSalt { get; set; }
+        public required string UserName { get; set; } // Owner username
+        public string Email { get; set; } = "";
+        public required string PasswordHash { get; set; }
+        public string? PasswordSalt { get; set; }
 
         // Relationships
         public ICollection<Salon> Salons { get; set; } = new List<Salon>(); // List of salons managed by the owner

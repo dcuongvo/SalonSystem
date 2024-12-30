@@ -4,10 +4,10 @@ namespace SalonSystem.Domain.Entities.Technicians
     public class TechnicianSkill
     {
         public int TechnicianId { get; set; } // Foreign Key to Technician
-        public virtual Technician Technician { get; set; } // Navigation Property
+        public virtual required Technician Technician { get; set; } // Navigation Property
 
         public int SkillId { get; set; } // Foreign Key to Skill
-        public virtual Skill Skill { get; set; } // Navigation Property
+        public virtual required Skill Skill { get; set; } // Navigation Property
 
         // Constructors
         public TechnicianSkill() { }
