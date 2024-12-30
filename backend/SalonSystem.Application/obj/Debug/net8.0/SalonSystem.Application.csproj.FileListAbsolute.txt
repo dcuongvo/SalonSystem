@@ -1,0 +1,17 @@
+C:\Development\.NET\SalonSystem\backend\SalonSystem.Application\bin\Debug\net8.0\SalonSystem.Application.deps.json
+C:\Development\.NET\SalonSystem\backend\SalonSystem.Application\bin\Debug\net8.0\SalonSystem.Application.dll
+C:\Development\.NET\SalonSystem\backend\SalonSystem.Application\bin\Debug\net8.0\SalonSystem.Application.pdb
+C:\Development\.NET\SalonSystem\backend\SalonSystem.Application\bin\Debug\net8.0\SalonSystem.Common.dll
+C:\Development\.NET\SalonSystem\backend\SalonSystem.Application\bin\Debug\net8.0\SalonSystem.Domain.dll
+C:\Development\.NET\SalonSystem\backend\SalonSystem.Application\bin\Debug\net8.0\SalonSystem.Domain.pdb
+C:\Development\.NET\SalonSystem\backend\SalonSystem.Application\bin\Debug\net8.0\SalonSystem.Common.pdb
+C:\Development\.NET\SalonSystem\backend\SalonSystem.Application\obj\Debug\net8.0\SalonSystem.Application.csproj.AssemblyReference.cache
+C:\Development\.NET\SalonSystem\backend\SalonSystem.Application\obj\Debug\net8.0\SalonSystem.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Development\.NET\SalonSystem\backend\SalonSystem.Application\obj\Debug\net8.0\SalonSystem.Application.AssemblyInfoInputs.cache
+C:\Development\.NET\SalonSystem\backend\SalonSystem.Application\obj\Debug\net8.0\SalonSystem.Application.AssemblyInfo.cs
+C:\Development\.NET\SalonSystem\backend\SalonSystem.Application\obj\Debug\net8.0\SalonSystem.Application.csproj.CoreCompileInputs.cache
+C:\Development\.NET\SalonSystem\backend\SalonSystem.Application\obj\Debug\net8.0\SalonSys.791A9A65.Up2Date
+C:\Development\.NET\SalonSystem\backend\SalonSystem.Application\obj\Debug\net8.0\SalonSystem.Application.dll
+C:\Development\.NET\SalonSystem\backend\SalonSystem.Application\obj\Debug\net8.0\refint\SalonSystem.Application.dll
+C:\Development\.NET\SalonSystem\backend\SalonSystem.Application\obj\Debug\net8.0\SalonSystem.Application.pdb
+C:\Development\.NET\SalonSystem\backend\SalonSystem.Application\obj\Debug\net8.0\ref\SalonSystem.Application.dll
