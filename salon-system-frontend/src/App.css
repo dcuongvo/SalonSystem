@@ -1,0 +1,7 @@
+#root {
+  width: 100%; /* Make it take the full width */
+  height: 100vh; /* Make it take the full height of the viewport */
+  margin: 0; /* Remove horizontal centering */
+  padding: 0; /* Remove unnecessary padding */
+}
+

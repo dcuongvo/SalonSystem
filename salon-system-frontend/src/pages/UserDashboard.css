@@ -1,0 +1,28 @@
+.user-dashboard {
+    padding: 20px;
+}
+
+.user-dashboard h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.user-dashboard ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.user-dashboard li {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.user-dashboard h3 {
+    margin: 0;
+}
+
+.user-dashboard p {
+    margin: 5px 0;
+}

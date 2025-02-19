@@ -10,8 +10,9 @@ namespace SalonSystem.Domain.Entities.Technicians
     {
         public ICollection<TechnicianSkill> TechnicianSkills { get; set; } = new List<TechnicianSkill>();
         public ICollection<TechnicianSchedule> TechnicianSchedules { get; set; } = new List<TechnicianSchedule>();
-        public ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
         public ICollection<DayOff> DaysOff { get; set; } = new List<DayOff>();
+        //public ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
+        public ICollection<AppointmentTechnician> AppointmentTechnicians { get; set; } = new List<AppointmentTechnician>();
 
         // Constructors
         public Technician() { }
@@ -20,6 +21,7 @@ namespace SalonSystem.Domain.Entities.Technicians
             : base(id, name, salary, payPeriodType, salonId) { }
 
         // Methods
+        /*
         public bool IsAvailable(DateTime appointmentTime, TimeSpan duration, ICollection<DayClose> dayCloses)
         {
             if (duration <= TimeSpan.Zero)
@@ -57,7 +59,7 @@ namespace SalonSystem.Domain.Entities.Technicians
 
             return noConflicts;
         }
-
+    */
         public bool CanPerformService(Service service)
         {
             return service.ServiceSkills.All(serviceSkill =>

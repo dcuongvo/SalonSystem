@@ -5,8 +5,7 @@ namespace SalonSystem.Infrastructure.Repositories.Appointments.Interfaces
 {
     public interface IAppointmentRepository : IRepository<Appointment>
     {
-        Task<IEnumerable<Appointment>> GetByTechnicianAndDateAsync(int technicianId, DateTime date);
-
-        Task<IEnumerable<Appointment>> GetByDateAsync(DateTime date);
+        Task<IEnumerable<Appointment>> GetAppointmentsByDateAsync(DateTime date);
+        Task<IEnumerable<Appointment>> GetAppointmentsBySalonIdAsync(int salonId);
     }
 }

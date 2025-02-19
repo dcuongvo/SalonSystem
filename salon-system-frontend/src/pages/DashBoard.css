@@ -1,0 +1,21 @@
+.container {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.links {
+    margin-top: 20px;
+}
+
+.link {
+    margin: 10px;
+    text-decoration: none;
+    color: blue;
+    font-size: 18px;
+}
+
+.link:hover {
+    color: darkblue;
+    text-decoration: underline;
+}

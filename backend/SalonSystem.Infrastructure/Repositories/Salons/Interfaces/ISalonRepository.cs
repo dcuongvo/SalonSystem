@@ -5,7 +5,7 @@ namespace SalonSystem.Infrastructure.Repositories.Salons.Interfaces
 {
     public interface ISalonRepository : IRepository<Salon>
     {
-        Task<IEnumerable<Salon>> GetByOwnerIdAsync(int ownerId);
-        Task<Salon?> GetSalonDetailsAsync(int salonId);
+        Task<Salon?> GetSalonWithDetailsAsync(int salonId);
+        Task<IEnumerable<Salon>> GetAllSalonsByOwnerIdAsync(int ownerId);
     }
 }

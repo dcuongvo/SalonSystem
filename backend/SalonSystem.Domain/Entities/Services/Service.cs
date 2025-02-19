@@ -1,5 +1,6 @@
 using SalonSystem.Domain.Entities.Salons;
 using SalonSystem.Domain.Entities.Technicians;
+using SalonSystem.Domain.Entities.Appointments;
 
 namespace SalonSystem.Domain.Entities.Services
 {
@@ -13,6 +14,7 @@ namespace SalonSystem.Domain.Entities.Services
         public int Duration {get;set;} = -1;
 
         public ICollection<ServiceSkill> ServiceSkills { get; set; } = new List<ServiceSkill>(); // Required skills for this service
+        public ICollection<AppointmentService> AppointmentServices { get; set; } = new List<AppointmentService>();
 
         // Constructors
         public Service() {}

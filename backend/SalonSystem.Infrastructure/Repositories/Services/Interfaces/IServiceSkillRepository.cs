@@ -5,6 +5,6 @@ namespace SalonSystem.Infrastructure.Repositories.Services.Interfaces
 {
     public interface IServiceSkillRepository : IRepository<ServiceSkill>
     {
-        Task<IEnumerable<ServiceSkill>> GetByServiceIdAsync(int serviceId);
+        Task<IEnumerable<ServiceSkill>> GetServiceSkillsByServiceIdAsync(int serviceId);
     }
 }

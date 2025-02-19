@@ -9,6 +9,8 @@ namespace SalonSystem.Domain.Entities.Users
         public required string UserName { get; set; } // Unique username
         public required string PasswordHash { get; set; }
         public string PasswordSalt { get; set; } = "";
+        public string FirstName {get;set;} = "";
+        public string LastName {get;set;} = "";
 
         // Role and Permissions
         public string Role { get; set; } = "Default"; // E.g., Manager, FrontDesk...

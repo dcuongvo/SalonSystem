@@ -5,7 +5,7 @@ namespace SalonSystem.Infrastructure.Repositories.Technicians.Interfaces
 {
     public interface ITechnicianRepository : IRepository<Technician>
     {
-        Task<IEnumerable<Technician>> GetBySalonIdAsync(int salonId);
-        Task<IEnumerable<Technician>> GetTechniciansWithSkillAsync(int skillId);
+        Task<IEnumerable<Technician>> GetTechniciansBySalonIdAsync(int salonId);
+        Task<bool> IsTechnicianAvailableAsync(int technicianId, DateTime dateTime, TimeSpan duration);
     }
 }

@@ -12,6 +12,11 @@ namespace SalonSystem.Domain.Entities.Salons
         public string Name { get; set; } = ""; // Salon Name
         public int OwnerId { get; set; }
         public User? Owner { get; set; }
+        public string Address { get; set; } 
+        public string City { get; set; } 
+        public string State { get; set; } 
+        public string ZipCode { get; set; } 
+        public string Country {get;set;} = "USA";
         public ICollection<Technician> Technicians { get; set; } = new List<Technician>(); // Working Technicians
         public ICollection<Service> Services { get; set; } = new List<Service>(); // All Offering Services
         public ICollection<Skill> Skills { get; set; } = new List<Skill>(); // 

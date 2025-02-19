@@ -5,7 +5,6 @@ namespace SalonSystem.Infrastructure.Repositories.Services.Interfaces
 {
     public interface ISkillRepository : IRepository<Skill>
     {
-        Task<IEnumerable<Skill>> GetBySalonIdAsync(int salonId);
-        Task<Skill?> GetByNameAsync(int salonId, string skillName);
+        Task<IEnumerable<Skill>> GetSkillsBySalonIdAsync(int salonId);
     }
 }
